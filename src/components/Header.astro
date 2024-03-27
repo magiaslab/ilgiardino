@@ -46,7 +46,7 @@
 <!--Set active class on nav when the page is active -->
 <script>
     const nav = document.querySelector(".navbar");
-    const navLinks = nav.querySelectorAll("a");
+    const navLinks = document.querySelectorAll("a");
     const currentURL = window.location.href;
     navLinks.forEach((link) => {
       if (link.href === currentURL) {
