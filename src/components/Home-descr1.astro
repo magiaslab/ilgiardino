@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import Foto1 from "../assets/DSC_4143.jpg"
+import Foto2 from "../assets/DSC_4250.jpg"
+---
+
 <section class="bg-primary-980 dark:bg-gray-900">
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -6,8 +12,8 @@
             <p>Una giornata in spiaggia, un percorso di trekking o tanti chilometri in bicicletta <span class="font-bold">Il Giardino dei Limoni</span> è nella posizione ideale per qualsiasi attività tu voglia fare per scoprire il nostro bellissimo territorio.</p>
         </div>
         <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-lg" src="/img/DSC_4250.jpg" alt="office content 1">
-            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/img/DSC_4143.jpg" alt="office content 2">
+            <Image class="w-full rounded-lg" src={Foto1} alt="Il giardino dei limoni terrazzo"/>
+            <Image class="mt-4 w-full lg:mt-10 rounded-lg" src={Foto2} alt="Il giardino dei limoni particolare interni"/>
         </div>
     </div>
 </section>
