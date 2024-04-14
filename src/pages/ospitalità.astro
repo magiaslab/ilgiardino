@@ -4,19 +4,19 @@ import Layout from '../layouts/Layout.astro';
 import Header from "../components/Header.astro";
 
 import Footer from "../components/Footer.astro"
-
+import { getImage } from "astro:assets";
 import { Image } from "astro:assets";
 import Foto1 from "../assets/DSC_4191.jpg"
-import Foto2 from "../assets/DSC_4239.jpg"
-import Foto3 from "../assets/DSC_4224.jpg"
+import myBackground from "../assets/DSC_4191.jpg"
+const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
 ---
 
 <Layout title="Ospitalità - Il Giardino dei Limoni B&B.">
 	<Header/>
 
 
-
-	<section class="bg-center bg-no-repeat bg-[url('../img/DSC_4191.jpg')] bg-gray-400 bg-blend-multiply">
+	
+	<section style={`background-image: url(${optimizedBackground.src});`} class="bg-center bg-gray-400 bg-blend-multiply">
 		<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
 			<h1 class="mb-4 text-6xl font-extrabold font-pd tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Camere & Appartamenti</h1>
 			<p class="mb-8 text-lg font-normal font-pd text-gray-300 lg:text-xl sm:px-16 lg:px-48">Arredate in stile Shabby Chic, dotate di tutto ciò che serve per una vacanza perfetta, scoprile e scegli quella che ti piace di più per la tua vacanza</p>
