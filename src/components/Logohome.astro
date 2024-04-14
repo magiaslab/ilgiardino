@@ -1,3 +1,14 @@
+---
+import { Image } from "astro:assets";
+import Suvereto from "../assets/suvereto.jpg"
+import BandieraA from "../assets/bandiera-arancione-seeklogo.svg"
+import Vino from "../assets/cittàdelvino1.png"
+import Olio from "../assets/TRASPARENZA_Logo_colori_ANCO30.png"
+import Slow from "../assets/Cittaslow_logo.png"
+import Borgo from "../assets/Logo-Borghi-per-sito.png"
+import Cde from "../assets/strada_v_o.jpg"
+import Ambito from "../assets/400x200.png"
+---
 
 <section class="bg-white dark:bg-gray-900">
     
@@ -10,35 +21,37 @@
                         Ti accogliamo nelle nostre camere o nell'appartamento, arredati in stile shabby chic per trascorrere le tue  vacanze in un oasi di pace e serenità</p>
                     
                 </div>
-                <div class=" lg:mt-0 lg:col-span-5 lg:flex lg:rounded-2xl rounded-2xl">
-                    <img class="rounded-xl" src="/img/suvereto.jpg" alt="suvereto">
+                <div class=" lg:mt-0 lg:col-span-5 lg:flex">
+                    <Image src={Suvereto} alt="Il giardino dei limoni Suvereto"  class="lg:rounded-xl rounded-xl" />    
                 </div>                
             </div>
         </section>
         <div class="grid grid-cols-3 gap-6 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-7 dark:text-gray-400">
             
-            <a href="#" class="flex justify-center items-center">
-                     <img src="/img/bandiera-arancione-seeklogo.svg" alt="">                                     
+            <a href="/" class="flex justify-center items-center">
+                    <Image src={BandieraA} alt="Il giardino dei limoni logo bandiera arancione"  />                                
             </a>
-            <a href="#" class="flex justify-center items-center">
-                          <img src="/img/cittàdelvino1.png" alt="">                                                 
+            <a href="/" class="flex justify-center items-center">
+                <Image src={Vino} alt="Il giardino dei limoni logo città del vino"  />                                                    
             </a>
 
-            <a href="#" class="flex justify-center items-center">
-                                                            <img src="/img/TRASPARENZA_Logo_colori_ANCO30.png" alt="">                                   
+            <a href="/" class="flex justify-center items-center">
+                <Image src={Olio} alt="Il giardino dei limoni logo città dell'olio'"  />   
             </a>
-            <a href="#" class="flex justify-center items-center">
-                    <img src="/img/Cittaslow_logo.png" alt="">                                                                             
+            <a href="/" class="flex justify-center items-center">
+                <Image src={Slow} alt="Il giardino dei limoni logo città slow"  />                                                                          
             </a>
            
-        <a href="#" class="flex justify-center items-center">
-            <img src="/img/i-borghi-piu-belli-ditalia-seeklogo.svg" alt="">                                                                             
+        <a href="https://borghipiubelliditalia.it/borgo/suvereto/" class="flex justify-center items-center">
+            <Image src={Borgo} alt="Il giardino dei limoni logo città dell'olio'"  />   
+
+        </a>
+    <a href="/" class="flex justify-center items-center">
+        <Image src={Cde} alt="Il giardino dei limoni logo città dell'olio'"  />   
+
     </a>
-    <a href="#" class="flex justify-center items-center">
-        <img src="/img/strada_v_o.jpg" alt="">                                                                             
-</a>
 <a href="#" class="flex justify-center items-center">
-    <img src="/img/400x200.png" alt="">                                                                             
+    <Image src={Ambito} alt="Il giardino dei limoni logo città dell'olio'"  />   
 </a>
         </div>
     </div>
