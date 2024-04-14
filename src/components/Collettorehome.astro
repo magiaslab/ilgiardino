@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import Foto1 from "../assets/DSC_4143.jpg"
-import Foto2 from "../assets/DSC_4235.jpg"
+import Foto1 from "../assets/DSC_4191.jpg"
+import Foto2 from "../assets/DSC_4239.jpg"
+import Foto3 from "../assets/DSC_4224.jpg"
+
 ---
 
 
@@ -13,9 +15,9 @@ import Foto2 from "../assets/DSC_4235.jpg"
              <div
                 class="mb-10 overflow-hidden duration-300 bg-white rounded-lg dark:bg-dark-2 shadow-1 hover:shadow-3 dark:shadow-card dark:hover:shadow-3"
                 >
-                <img
-                   src="/img/DSC_4239.jpg"
-                   alt="image"
+                <Image
+                   src={Foto2}
+                   alt="Il Giardino dei limoni immagine giardino"
                    class="w-full"
                    />
                 <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
@@ -45,9 +47,9 @@ import Foto2 from "../assets/DSC_4235.jpg"
              <div
                 class="mb-10 overflow-hidden duration-300 bg-white rounded-lg dark:bg-dark-2 shadow-1 hover:shadow-3 dark:shadow-card dark:hover:shadow-3"
                 >
-                <img
-                   src="/img/DSC_4191.jpg"
-                   alt="image"
+                <Image
+                   src={Foto1}
+                   alt="Il giardino dei limoni immagine interno"
                    class="w-full"
                    />
                 <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
@@ -75,9 +77,9 @@ import Foto2 from "../assets/DSC_4235.jpg"
              <div
                 class="mb-10 overflow-hidden duration-300 bg-white rounded-lg dark:bg-dark-2 shadow-1 hover:shadow-3 dark:shadow-card dark:hover:shadow-3"
                 >
-                <img
-                   src="/img/DSC_4224.jpg"
-                   alt="image"
+                <Image
+                   src={Foto3}
+                   alt="La Locanda delle Stelle Suvereto"
                    class="w-full"
                    />
                 <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
