@@ -44,6 +44,7 @@ module.exports = {
 		],
 			'sans': [
 		  'bevan',
+		  'kreon'
 		  
 		],
 		'body':[
