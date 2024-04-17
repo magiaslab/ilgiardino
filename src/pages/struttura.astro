@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro'; 
+
+import Header from "../components/Header.astro";
+import Herostrutturaimg from '../components/Herostrutturaimg.astro';
+import Footer from "../components/Footer.astro"
+import { Image } from "astro:assets";
+import Zenzero1 from "../assets/zenzero/DSC_4176.jpg"
+import Menta from "../assets/menta/DSC_4129.jpg"
+import Lavanda from "../assets/lavanda/DSC_4146.jpg"
+import Salvia from "../assets/salvia/DSC_4165.jpg"
+
+
+
+---
+
+<Layout title="Ospitalità - Il Giardino dei Limoni B&B.">
+	<Header/>
+
+	
+	<Herostrutturaimg/>
+	
+
+	<section class="relative z-[1] my-10">
+		<div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+		  <div class="grid grid-cols-12 gap-y-6 lg:gap-5 items-center">
+			<div class="col-span-12 lg:col-span-6">
+			  <div class="flex flex-col gap-4">
+				<p class="text-sm font-sans text-sec-green capitalize">Suite Familiare</p>
+				<h1 class="font-bold font-serif text-primary-brown text-5xl">Zenzero Suite</h1>
+				<p class="leading-normal font-body">Spazio per tutta la famiglia e tutto ciò che ti aspetti di trovare</p>
+			
+				<div class="flex flex-wrap gap-4 items-center">
+				  <a href="#0" class="text-white bg-primary-brown hover:bg-sec-yellow hover:text-sec-green shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Scopri la suite</a>
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="col-span-12 lg:col-span-6">
+			  <figure>
+				<Image class="w-full rounded-xl" data-img-light src={Zenzero1} alt="Image description">
+			  </figure>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	
+	  <section class="relative z-[1] my-10">
+		<div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+		  <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
+			<div class="col-span-12 lg:col-span-6 lg:order-2">
+				<div class="flex flex-col gap-4">
+					<p class="text-sm font-sans text-sec-green capitalize">Camera matrimoniale</p>
+					<h1 class="font-bold font-serif text-primary-brown text-5xl">Menta</h1>
+					<p class="leading-normal font-body">Il profumo della menta, colori freschi e accoglienti per rilassarti e godere appieno 
+						della tua vacanza, camera che accoglie due ospiti.</p>
+				
+					<div class="flex flex-wrap gap-4 items-center">
+					  <a href="#0" class="text-white bg-primary-brown hover:bg-sec-yellow hover:text-sec-green shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Scopri la camera</a>
+					</div>
+				  </div>
+			</div>
+		  
+			<div class="col-span-12 lg:col-span-6 lg:order-1">
+			  <figure>
+				<Image class="w-full rounded-xl" data-img-light src={Menta} alt="Image description">
+				</figure>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+	  <section class="relative z-[1] my-10">
+		<div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+		  <div class="grid grid-cols-12 gap-y-6 lg:gap-5 items-center">
+			<div class="col-span-12 lg:col-span-6">
+			  <div class="flex flex-col gap-4">
+				<p class="text-sm font-sans text-sec-green capitalize">Camera tripla</p>
+				<h1 class="font-bold font-serif text-primary-brown text-5xl">Lavanda</h1>
+				<p class="leading-normal font-body">Il colore della lavanda, una camera che accoglie due ospiti più eventuale lettino
+					aggiunto</p>
+			
+				<div class="flex flex-wrap gap-4 items-center">
+				  <a href="#0" class="text-white bg-primary-brown hover:bg-sec-yellow hover:text-sec-green shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Scopri la camera</a>
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="col-span-12 lg:col-span-6">
+			  <figure>
+				<Image class="w-full rounded-xl" data-img-light src={Lavanda} alt="Image description">
+			  </figure>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  <section class="relative z-[1] my-10">
+		<div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+		  <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
+			<div class="col-span-12 lg:col-span-6 lg:order-2">
+				<div class="flex flex-col gap-4">
+					<p class="text-sm font-sans text-sec-green capitalize">Camera matrimoniale</p>
+					<h1 class="font-bold font-serif text-primary-brown text-5xl">Salvia</h1>
+					<p class="leading-normal font-body">Una delle essenze del nostro territorio che ritrovi nella camera salvia
+						accoglie due ospiti adulti più eventuale lettino aggiunto.</p>
+				
+					<div class="flex flex-wrap gap-4 items-center">
+					  <a href="#0" class="text-white bg-primary-brown hover:bg-sec-yellow hover:text-sec-green shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Scopri la camera</a>
+					</div>
+				  </div>
+			</div>
+		  
+			<div class="col-span-12 lg:col-span-6 lg:order-1">
+			  <figure>
+				<Image class="w-full rounded-xl" data-img-light src={Salvia} alt="Image description">
+				</figure>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	<Footer />
+</Layout>
+
+
+
