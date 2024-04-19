@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Camerelayout from '../../layouts/Camerelayout.astro';
+
+export async function getStaticPaths() {
+  const camereEntries = await getCollection('camere');
+  return camereEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<Camerelayout frontmatter={entry.data}>
+  <Content />
+</Camerelayout>
