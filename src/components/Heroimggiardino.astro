@@ -1,0 +1,26 @@
+---
+import { getImage } from "astro:assets";
+import myBackground from "../assets/DSC_4239.jpg"
+const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
+---
+
+<!-- Background image -->
+<div
+
+  class=" h-screen bg-cover bg-no-repeat content-center"
+  style={`background-image: url(${optimizedBackground.src});`}>
+  <div class=" max-w-screen-xl md:px-5 py-8 m-4 lg:mx-auto  lg:py-12 bg-white/60 rounded-xl sm:px-5">
+   
+    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl content-center">
+        <div class="text-m text-sec-green/80 mb-3">Il Giardino dei Limoni</div>
+
+        <h1 class="lg:text-8xl text-4xl font-bold mb-2 font-serif text-primary-brown-500">Pace & Relax</h1>
+    
+        <p class="leading-normal mb-6 mt-6 font-body">Il Giardino dei Limoni la nostra oasi di relax</p>
+    
+        
+      </div>
+    </div>
+</div>
+<!-- Background image -->
+
