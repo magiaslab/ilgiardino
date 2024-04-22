@@ -8,14 +8,17 @@ import Footer from "../components/Footer.astro"
 import Hero from "../components/Heroimggiardino.astro"
 import { Image } from "astro:assets";
 
-import Image1 from "../assets/giardino/DSC_4234.jpg"
-import Image2 from "../assets/giardino/DSC_4235.jpg"
+
+import Image1 from "../assets/giardino/DSC_4235.jpg"
+import Image2 from "../assets/giardino/DSC_4247.jpg"
 import Image3 from "../assets/giardino/DSC_4239.jpg"
-import Image4 from "../assets/giardino/DSC_4240.jpg"
-import Image5 from "../assets/giardino/DSC_4244.jpg"
-import Image6 from "../assets/giardino/DSC_4245.jpg"
+import Image4 from "../assets/giardino/DSC_4245.jpg"
+import Image5 from "../assets/giardino/DSC_4254.jpg"
+import Image6 from "../assets/giardino/DSC_4258.jpg"
 
-
+import { getImage } from "astro:assets";
+import Image1light from "../assets/giardino/DSC_4234.jpg"
+const Light1 = await getImage({src: Image1light, format: 'webp'});
 ---
 
 <Layout title="Il Giardino - Il Giardino dei Limoni B&B.">
@@ -69,12 +72,24 @@ import Image6 from "../assets/giardino/DSC_4245.jpg"
 	  </section>
 
 	  <ul class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
-		<li><Image class="block w-full rounded-lg" src={Image1} alt="placeholder"></li>
-			<li><Image class="block w-full rounded-lg" src={Image2} alt="placeholder"></li>
-				<li><Image class="block w-full" src={Image3} alt="placeholder"></li>
-					<li><Image class="block w-full" src={Image4} alt="placeholder"></li>
-						<li><Image class="block w-full" src={Image5} alt="placeholder"></li>
-							<li><Image class="block w-full" src={Image6} alt="placeholder"></li>
+		<a data-fslightbox href={Image1.src}>
+			<Image src={Image1} alt="Camillo Bianchi" class="block w-full rounded-lg" />
+		</a>
+		<a data-fslightbox href={Image2.src}>
+			<Image src={Image2} alt="Camillo Bianchi" class="block w-full rounded-lg" />
+		</a>
+		<a data-fslightbox href={Image3.src}>
+			<Image src={Image3} alt="Camillo Bianchi" class="block w-full rounded-lg" />
+		</a>
+		<a data-fslightbox href={Image4.src}>
+			<Image src={Image4} alt="Camillo Bianchi" class="block w-full rounded-lg" />
+		</a>
+		<a data-fslightbox href={Image5.src}>
+			<Image src={Image5} alt="Camillo Bianchi" class="block w-full rounded-lg" />
+		</a>
+		<a data-fslightbox href={Image6.src}>
+			<Image src={Image6} alt="Camillo Bianchi" class="block w-full rounded-lg" />
+		</a>
 							 </ul>
 	  <section class="relative z-[1] my-32">
 		<div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
