@@ -1,7 +1,7 @@
 ---
-title: Camera Menta
-tipologia: Camera Matrimoniale
-description: Camera matrimoniale per due ospiti adulti, bagno con doccia, tv sat, WiFi free e tutto ciò che serve per un soggiorno perfetto
+title: Camera Lavanda
+tipologia: Camera Tripla
+description: Il colore della lavanda, una camera che accoglie due ospiti più eventuale lettino aggiunto
 background:
   src: /img/DSC_4143.jpg
   alt: Foto camera menta
@@ -18,5 +18,5 @@ image3:
     src: /img/DSC_4143.jpg
     alt: Foto camera manta
 tags: camere
-commento: La camera giusta per una vacanza in coppia
+commento: Dormire nel profumo della lavanda
 ---

@@ -7,11 +7,12 @@ const camereCollection = defineCollection({
       title: z.string(),
       description: z.string(),
       tipologia: z.string(),
+      commento: z.string(),
       image: z.object({
         src: z.string(),
         alt: z.string(),
       }),
-      imag1: z.object({
+      image1: z.object({
         src: z.string(),
         alt: z.string(),
       }),
