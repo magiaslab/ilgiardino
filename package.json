@@ -32,7 +32,6 @@
     "flowbite-datepicker": "^1.2.6",
     "lottie-web": "^5.12.2",
     "react": "^18.3.1",
-    "react-cookie-bubble": "^1.0.3",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.3"
