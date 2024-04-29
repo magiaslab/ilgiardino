@@ -4,6 +4,7 @@ const {frontmatter} = Astro.props;
 import { getImage } from "astro:assets";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CTA from "../components/CtaPrenota.astro";
 ---
 
 <Layout title={frontmatter.title}>
@@ -21,7 +22,6 @@ import Footer from "../components/Footer.astro";
     
         <h1 class="lg:text-8xl text-4xl font-bold mb-2 font-serif text-primary-brown-500">{frontmatter.title}</h1>
     
-        <p class="leading-normal mb-6 mt-6 font-body">{frontmatter.description}</p>
     
         
       </div>
@@ -31,11 +31,12 @@ import Footer from "../components/Footer.astro";
 
 <section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-accent-400 bg-cover bg-no-repeat bg-center text-center">
     <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">    
-      <p class="leading-normal mb-6">{frontmatter.description}</p>
+      <p class="leading-normal font-bold font-body mb-6">{frontmatter.description}</p>
+     
   
     </div>
   </section>
-
+  <CTA/>
   <section class="adv-gallery relative z-[1] py-16">
     <div class="grid gap-8 w-[calc(100%_-_3rem)] max-w-7xl mx-auto lg:grid-cols-12 xl:gap-6 xl:grid-rows-[repeat(12,_50px)]">
       <div class="lg:col-span-5 xl:col-[1/4] xl:row-[1/7]">

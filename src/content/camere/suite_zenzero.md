@@ -1,7 +1,7 @@
 ---
 title: Suite Zenzero
 tipologia: Suite Familiare
-description: Spazio per tutta la famiglia e tutto ciò che ti aspetti di trovare
+description: Spazio per tutta la famiglia e tutto ciò che ti aspetti di trovare, un piccolo appartamento con cucina attrezzata, piccolo balcone, camera matrimoniale e bagno, nel soggiorno il divano letto accoglie altri due ospiti
 background:
   src: /img/zenzero/DSC_4176.jpg
   alt: Foto camera menta

@@ -1,7 +1,7 @@
 ---
 title: Camera Lavanda
 tipologia: Camera Tripla
-description: Il colore della lavanda, una camera che accoglie due ospiti più eventuale lettino aggiunto
+description: Il colore della lavanda, una camera matrimoniale che accoglie due ospiti più eventuale lettino aggiunto per la comodità di tre persone, bagno con doccia e piccolo balcone
 background:
   src: /img/lavanda/DSC_4146.jpg
   alt: Foto camera menta
