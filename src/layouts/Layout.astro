@@ -36,8 +36,8 @@ const schema = {
 	},
 	"geo": {
 		"@type": "GeoCoordinates",
-		"latitude": "43.0678",
-		"longitude": "10.6775"
+		"latitude": "43.077647610098644",
+		"longitude": "10.679729625180663"
 	},
 	"priceRange": "€€",
 	"telephone": "+39 328 8264834"
@@ -51,7 +51,7 @@ const schema = {
 		<script is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6e7734ce-bb4a-4c95-a2cc-05577fd533ca" data-blockingmode="auto" type="text/javascript"></script>
 
 		<!-- Google Analytics 4 with Cookiebot Integration -->
-		<script type="text/plain" data-cookiecategory="statistics">
+		<script is:inline type="text/plain" data-cookiecategory="statistics">
 			// Load GA4 only after statistics cookies are accepted
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -70,7 +70,7 @@ const schema = {
 
 		<!-- Cookiebot Callback Handler -->
 		<script is:inline>
-			window.addEventListener('CookiebotOnAccept', function (e) {
+			window.addEventListener('CookiebotOnAccept', function () {
 				if (Cookiebot.consent.statistics) {
 					// Reinitialize GA4 when statistics cookies are accepted
 					if (typeof gtag === 'function') {
@@ -81,7 +81,7 @@ const schema = {
 				}
 			});
 
-			window.addEventListener('CookiebotOnDecline', function (e) {
+			window.addEventListener('CookiebotOnDecline', function () {
 				if (!Cookiebot.consent.statistics) {
 					// Revoke GA4 consent when statistics cookies are declined
 					if (typeof gtag === 'function') {
@@ -139,7 +139,7 @@ const schema = {
 		/>
 		<meta charset="UTF-8" />
 		<meta name="generator" content={Astro.generator} />
-		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
 	<body>
 		<slot />
