@@ -1,42 +1,145 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
+	type?: string;
+	canonicalURL?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "Il Giardino dei Limoni, B&B di charme a Suvereto nella Costa degli Etruschi. Camere eleganti con vista sul borgo medievale, colazione con prodotti locali, giardino mediterraneo.",
+	image = "/img/DSC_4235.jpg",
+	type = "website",
+	canonicalURL = Astro.url.href
+} = Astro.props;
+
 import { SEO } from "astro-seo";
-
-// Supports weights 400-900
-// Supports weights 400-900
 import '@fontsource-variable/playfair-display';
-import '@fontsource/bevan'
-import '@fontsource-variable/kreon'
+import '@fontsource/bevan';
+import '@fontsource-variable/kreon';
 
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BedAndBreakfast",
+	"name": "Il Giardino dei Limoni",
+	"image": image,
+	"description": description,
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Via Don Luigi Sturzo 13",
+		"addressLocality": "Suvereto",
+		"addressRegion": "LI",
+		"postalCode": "57028",
+		"addressCountry": "IT"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "43.0678",
+		"longitude": "10.6775"
+	},
+	"priceRange": "€€",
+	"telephone": "+39 328 8264834"
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="it">
 	<head>
-		<SEO
-		title={title}
-		description="Ospitalità a Suvereto nella Costa degli Etruschi"
-		openGraph={{
-		  basic: {
-			title: "Il Giardino dei Limoni B&B a Suvereto",
-			type: "A type.",
-			image: "/img/DSC_4235.jpg",
-		  }
-		}}
-		
-		
-	  />
-		<meta charset="UTF-8" />
-		<meta name="description" content="Il Giardino dei Limoni B&B a Suvereto, perla della Costa degli Etruschi e uno dei borghi storici più belli d'Italia'" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta name="generator" content={Astro.generator} />
+		<!-- Cookiebot Cookie Declaration -->
 		<script is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6e7734ce-bb4a-4c95-a2cc-05577fd533ca" data-blockingmode="auto" type="text/javascript"></script>
+
+		<!-- Google Analytics 4 with Cookiebot Integration -->
+		<script type="text/plain" data-cookiecategory="statistics">
+			// Load GA4 only after statistics cookies are accepted
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','G-QK13XQCFTN');
+
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-QK13XQCFTN', {
+				'cookie_flags': 'SameSite=None;Secure',
+				'anonymize_ip': true
+			});
+		</script>
+
+		<!-- Cookiebot Callback Handler -->
+		<script is:inline>
+			window.addEventListener('CookiebotOnAccept', function (e) {
+				if (Cookiebot.consent.statistics) {
+					// Reinitialize GA4 when statistics cookies are accepted
+					if (typeof gtag === 'function') {
+						gtag('consent', 'update', {
+							'analytics_storage': 'granted'
+						});
+					}
+				}
+			});
+
+			window.addEventListener('CookiebotOnDecline', function (e) {
+				if (!Cookiebot.consent.statistics) {
+					// Revoke GA4 consent when statistics cookies are declined
+					if (typeof gtag === 'function') {
+						gtag('consent', 'update', {
+							'analytics_storage': 'denied'
+						});
+					}
+				}
+			});
+		</script>
+
+		<!-- Google Search Console Verification -->
+		<meta name="google-site-verification" content="D3uDM35rWtk2yayBqxKHyogRWasim7DQwv9NvQoFY7M" />
+
+		<SEO
+			title={`${title} | Il Giardino dei Limoni B&B Suvereto`}
+			description={description}
+			canonical={canonicalURL}
+			openGraph={{
+				basic: {
+					title: title,
+					type: type,
+					image: image,
+				},
+				optional: {
+					locale: "it_IT",
+					siteName: "Il Giardino dei Limoni",
+					description: description,
+				},
+				image: {
+					alt: "Il Giardino dei Limoni B&B Suvereto",
+				}
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@ilgiardinodeilimonibeb",
+				title: title,
+				description: description,
+				image: image,
+				imageAlt: "Il Giardino dei Limoni B&B Suvereto"
+			}}
+			extend={{
+				meta: [
+					{ name: "viewport", content: "width=device-width, initial-scale=1" },
+					{ name: "theme-color", content: "#ffffff" },
+					{ name: "robots", content: "index, follow" },
+					{ name: "author", content: "Il Giardino dei Limoni" }
+				],
+				link: [
+					{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+					{ rel: "sitemap", href: "/sitemap-index.xml" },
+					{ rel: "alternate", hreflang: "it", href: canonicalURL }
+				]
+			}}
+		/>
+		<meta charset="UTF-8" />
+		<meta name="generator" content={Astro.generator} />
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
 	<body>
 		<slot />

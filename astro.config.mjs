@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import lottie from "astro-integration-lottie";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 import react from "@astrojs/react";
@@ -9,7 +8,7 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ilgiardinodeilimonibeb.com',
-  integrations: [tailwind(), sitemap(), lottie(), icon(), react(), robotsTxt(
+  integrations: [tailwind(), sitemap(), icon(), react(), robotsTxt(
     {
       policy: [
         {
